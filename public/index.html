@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <h2 class="tries" id="js--tries">Tries :0</h2>
+    <div class="board" id="js--board">
+        <div class="card1" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card1" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card2" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card2" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card3" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card3" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card4" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+        <div class="card4" onclick="flip(this)"> <div class="back"></div> <div class="front"></div> </div>
+    </div>
+    <button class="button" onclick="reset()">Reset</button>
+    <div class="modal hidden" id="js--modal" onclick="closeModal()">
+        <div class="popup">
+            <h1>You're Done!</h1>
+            <p>Nice job :)</p>
+            <button class="button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</body>
+
+</html>

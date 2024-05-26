@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(/assets/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tries{
+    color: white;
+    text-wrap: nowrap;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.board{
+    width: 90vw;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.board > div{
+    width: 80px;
+    height: 120px;
+    animation: 0.5s all;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin: 10px;
+    position: relative;
+}
+
+.board > div > div{
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back{
+    background: url(/assets/cardback.svg);
+    background-size: cover;
+}
+
+.card1 > .front{
+    background: url(/assets/card1.svg);
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+.card2 > .front{
+    background: url(/assets/card2.svg);
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+.card3 > .front{
+    background: url(/assets/card3.svg);
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+.card4 > .front{
+    background: url(/assets/card4.svg);
+    transform: rotateY(180deg);
+    background-size: cover;
+}
+
+.flipped{
+    pointer-events: none;
+    transform: rotateY(180deg);
+}
+
+.button{
+    margin: 0 auto;
+    display: block;
+    background-color: #000000ac; /* Green */
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.popup *{
+    margin: 5px auto;
+}
+
+.popup h1{
+    text-align: center;
+    text-wrap: nowrap;
+}
